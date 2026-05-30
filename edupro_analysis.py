@@ -1,29 +1,3 @@
-"""
-============================================================
-EduPro Online Platform - Learner Demographics &
-Course Enrollment Behavior Analysis
-============================================================
-
-Author  : Akash kumar sahu
-Dataset : EduPro_Online_Platform.xlsx
-Sheets  : Users, Courses, Transactions
-
-What this script does (step by step):
-  1. Load and inspect all three sheets
-  2. Clean & prepare data (age bands, date parsing, etc.)
-  3. Data integration — join Users ↔ Transactions ↔ Courses
-  4. Learner Demographic Analysis
-  5. Enrollment Distribution Analysis
-  6. Demographics × Course Preference Analysis
-  7. Behavioral Insights
-  8. KPI Summary
-  9. Save all charts as PNG files
-
-Requirements:
-  pip install pandas openpyxl matplotlib seaborn
-============================================================
-"""
-
 # ─────────────────────────────────────────────
 # 0.  IMPORTS
 # ─────────────────────────────────────────────
