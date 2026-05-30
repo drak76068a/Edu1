@@ -24,9 +24,8 @@ Requirements:
 ============================================================
 """
 
-# ─────────────────────────────────────────────
 # 0.  IMPORTS
-# ─────────────────────────────────────────────
+
 import pandas as pd
 import matplotlib.pyplot as plt
 import matplotlib.ticker as mticker
@@ -44,14 +43,18 @@ PALETTE   = "Set2"
 FIG_SIZE  = (10, 6)
 
 
-# ─────────────────────────────────────────────
+
 # 1.  LOAD DATA
-# ─────────────────────────────────────────────
+
 print("=" * 60)
 print("STEP 1: Loading data from Excel …")
 print("=" * 60)
 
-FILE = "EduPro_Online_Platform.xlsx"
+# ── SECTION 2 - Load Data ─────────────────────────────────
+import os
+
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+FILE = os.path.join(BASE_DIR, "EduPro_Online_Platform.xlsx")
 
 users        = pd.read_excel(FILE, sheet_name="Users")
 courses      = pd.read_excel(FILE, sheet_name="Courses")
@@ -64,9 +67,9 @@ for name, df in [("Users", users), ("Courses", courses), ("Transactions", transa
 print()
 
 
-# ─────────────────────────────────────────────
+
 # 2.  DATA CLEANING & PREPARATION
-# ─────────────────────────────────────────────
+
 print("=" * 60)
 print("STEP 2: Cleaning & preparing data …")
 print("=" * 60)
@@ -126,10 +129,10 @@ print(f"  Categories: {sorted(courses['CourseCategory'].unique().tolist())}")
 print()
 
 
-# ─────────────────────────────────────────────
+
 # 3.  DATA INTEGRATION
 #     Join: Transactions ↔ Users ↔ Courses
-# ─────────────────────────────────────────────
+
 print("=" * 60)
 print("STEP 3: Joining tables …")
 print("=" * 60)
