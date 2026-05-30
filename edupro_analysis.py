@@ -50,8 +50,11 @@ FIG_SIZE  = (10, 6)
 print("=" * 60)
 print("STEP 1: Loading data from Excel …")
 print("=" * 60)
+# ── SECTION 2 - Load Data ─────────────────────────────────
+import os
 
-FILE = "https://github.com/drak76068a/Edu1/blob/main/EduPro_Online_Platform.xlsx"
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+FILE = os.path.join(BASE_DIR, "EduPro_Online_Platform.xlsx")
 
 users        = pd.read_excel(FILE, sheet_name="Users")
 courses      = pd.read_excel(FILE, sheet_name="Courses")
