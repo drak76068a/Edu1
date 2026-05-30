@@ -51,7 +51,7 @@ print("=" * 60)
 print("STEP 1: Loading data from Excel …")
 print("=" * 60)
 
-FILE = "EduPro_Online_Platform.xlsx"
+FILE = "https://github.com/drak76068a/Edu1/blob/main/EduPro_Online_Platform.xlsx"
 
 users        = pd.read_excel(FILE, sheet_name="Users")
 courses      = pd.read_excel(FILE, sheet_name="Courses")
